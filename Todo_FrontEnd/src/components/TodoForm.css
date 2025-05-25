@@ -1,0 +1,105 @@
+.todo-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.wide {
+  grid-column: span 3;
+}
+
+.todo-form input,
+.todo-form textarea,
+.todo-form button {
+  font-family: auto;
+  outline: none;
+  background-color: #f1f0f0;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.todo-form .date-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-form label {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.todo-form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.todo-form button {
+  background-color: #2b6bb0f4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: auto;
+  width: 50%;
+}
+
+.todo-form button:hover {
+  background-color: #175292;
+}
+
+.error-box {
+  margin-top: 1rem;
+  background-color: #fff5f5;
+  border: 1px solid #fc8181;
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  grid-column: span 3;
+}
+
+.error-message {
+  color: #e53e3e;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+  list-style-type: disc;
+  margin-left: 1.2rem;
+}
+
+.date-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  grid-column: span 3;
+}
+
+.date-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.todo-form button {
+  background-color: #2b6bb0f4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 1rem auto 0;
+  width: 100%;
+  grid-column: span 3;
+}
+
+.success-message {
+  background-color: #d1f7d6;
+  color: #276749;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border: 1px solid #38a169;
+  border-radius: 8px;
+  margin: 0px auto 0;
+  font-weight: 500;
+  width: 25%;
+  grid-column: span 3;
+}
