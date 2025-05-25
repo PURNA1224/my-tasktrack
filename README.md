@@ -88,6 +88,9 @@ npm run dev
 ## 🌐 Live Demo
 
 [👉 Visit the deployed site](https://my-tasktrack.netlify.app/)
+⚠️ Note: The backend server may shut down occasionally since it is hosted on a free tier. Please contact me if you encounter issues accessing the live demo.
+
+
 
 ---
 
