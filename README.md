@@ -1,15 +1,29 @@
 # 📋 Task Tracker Application
 
-tasktrack is a personal task management app that helps users stay organized and productive. With this app, users can easily **add**, **update**, **delete**, and **track** the status of their daily tasks all in one place.
-
-To make things even smarter, I integrated **Gemini AI** to automatically generate a summary of pending tasks. With just one click, users can post that summary directly into a **Slack group**, making team updates smooth and effortless.
+A full-stack web app for tracking personal tasks, built using Vite + React (frontend) and Spring Boot (backend), integrated with Supabase for task data storage, Gemini AI for intelligence features, and Slack integration via webhooks.
 
 ---
+
+## 📡 API Endpoints (Backend)
+
+The Spring Boot backend exposes the following endpoints:
+
+```http
+GET    /todo/getAllTodos                           # Fetch all to-do items
+POST   /todo/createTodo                            # Add a new to-do item
+DELETE /todo/deleteTodo/${id}                      # Delete a to-do item by ID
+POST   /todo/summarize                             # Generate a summary of pending to-dos and send it to Slack
+PUT    /todo/update/${id}?isPending=${isPending}   # Update status of the to-do
+GET    /todo/getPendingTodos                       # Fetch pending to-do items
+POST   /todo/sendMessage", message, { headers: {   # Send message to slack by passing message
+              "Content-Type": "text/plain",
+           },
+        }
+```
 
 ## 🚀 Features
 
 * Add, update, delete tasks
-* User authentication (via Supabase)
 * AI-powered suggestions (via Gemini API)
 * Slack notifications via webhooks
 * Persistent task storage
@@ -23,10 +37,9 @@ To make things even smarter, I integrated **Gemini AI** to automatically generat
 * **Frontend**: React (Vite), HTML/CSS, Axios
 * **Backend**: Spring Boot, REST API
 * **Database**: Supabase (PostgreSQL)
-* **Auth**: Supabase Auth
 * **AI Integration**: Gemini API (via API key)
 * **Notifications**: Slack Webhooks
-* **Deployment**: Vercel (Frontend), Render/Heroku (Backend)
+* **Deployment**: Netlify (Frontend), Render (Backend)
 
 ---
 
@@ -69,8 +82,9 @@ npm run dev
 
 ## 💬 Slack + Gemini Setup
 
-* **Gemini**: Used for AI enhancements via environment variable `GEMINI_API` (set in the system, not in a `.env` file).
-* **Slack**: Connected using Slack Incoming Webhooks.
+* **Gemini**: Used for AI enhancements via the `GEMINI_API` and `GEMINI_KEY` environment variable.
+* **Slack**: Connected using `SLACK_WEBHOOK_URL` environment variable.
+* These environment variables must be set in your system (they are not stored in a `.env` file).
 
 ---
 
@@ -85,12 +99,11 @@ npm run dev
 
 ---
 
-## 🌐 Live Demo
+## 🌐 Live Demo (Optional)
 
-[👉 Visit the deployed site](https://my-tasktrack.netlify.app/)
-⚠️ Note: The backend server may shut down occasionally since it is hosted on a free tier. Please contact me if you encounter issues accessing the live demo.
+[👉 Visit the deployed site](https://my-tasktrack.netlify.app)
 
-
+> ⚠️ **Note:** The backend server may shut down occasionally since it is hosted on a free tier. Please contact me if you encounter issues accessing the live demo.
 
 ---
 
