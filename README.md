@@ -29,7 +29,6 @@ Todo_FrontEnd/ --> React.js frontend (components, views, routes)
 ## 📦 How to Run
 
 ### Backend (Spring Boot)
-bash
 cd backend
 mvn spring-boot:run
 ### Frontend (React)
