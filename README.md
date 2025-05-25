@@ -46,13 +46,12 @@ cd TodoBackEnd
 
 # Set environment variables manually (e.g., using export or system settings)
 # Example (Linux/macOS):
-export GEMINI_API_KEY=your_gemini_api_key
-export SLACK_WEBHOOK_URL=your_slack_webhook_url
-export 
+export GEMINI_API=your_gemini_api_key
+
+# 👉 A demo of these environment variables is included in the `.env.example` file
 
 # Example (Windows CMD):
-set GEMINI_API_KEY=your_gemini_api_key
-set SLACK_WEBHOOK_URL=your_slack_webhook_url
+set GEMINI_API=your_gemini_api_key
 
 ./mvnw spring-boot:run
 ```
@@ -70,7 +69,7 @@ npm run dev
 
 ## 💬 Slack + Gemini Setup
 
-* **Gemini**: Used for AI enhancements via environment variable `GEMINI_API_KEY` (set in the system, not in a `.env` file).
+* **Gemini**: Used for AI enhancements via environment variable `GEMINI_API` (set in the system, not in a `.env` file).
 * **Slack**: Connected using Slack Incoming Webhooks.
 
 ---
