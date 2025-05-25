@@ -126,5 +126,5 @@ my-tasktrack/
 ## 🧑‍💻 Author
 
 **Kandiboina Purna Sekhar**
-B.Tech in Information Technology
-GitHub: [@PURNA1224](https://github.com/PURNA1224)
+* B.Tech in Information Technology
+* GitHub: [@PURNA1224](https://github.com/PURNA1224)
